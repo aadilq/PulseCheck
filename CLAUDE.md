@@ -70,10 +70,10 @@ Each check sends a `GET` request to the URL and records four data points:
 ### Phase 1 — Flask Dashboard + SQLite
 
 **1.1 Project Scaffolding**
-- [ ] Create folder structure: `dashboard/`, `monitor/`, `alerter/`, `infra/`
-- [ ] Set up `venv`, `requirements.txt` per service
-- [ ] Add root `docker-compose.yml` skeleton (services defined, not yet wired)
-- [ ] Add `.env.example` for environment variables
+- [✅] Create folder structure: `dashboard/`, `monitor/`, `alerter/`, `infra/`
+- [✅] Set up `venv`, `requirements.txt` per service
+- [✅] Add root `docker-compose.yml` skeleton (services defined, not yet wired)
+- [✅] Add `.env.example` for environment variables
 
 **1.2 Database Schema**
 - [ ] `urls` table: `id`, `name`, `url`, `created_at`
