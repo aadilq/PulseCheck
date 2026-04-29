@@ -1,0 +1,10 @@
+Flask==3.0.3
+fastapi
+uvicorn[standard]
+httpx
+aiosqlite
+prometheus-client
+python-dotenv
+pytest
+pytest-asyncio
+ruff

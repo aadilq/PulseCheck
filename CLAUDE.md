@@ -78,7 +78,7 @@ Each check sends a `GET` request to the URL and records four data points:
 **1.2 Database Schema**
 - [ ] `urls` table: `id`, `name`, `url`, `created_at`
 - [ ] `checks` table: `id`, `url_id`, `checked_at`, `status_code`, `response_time_ms`, `is_up`
-- [ ] `incidents` table: `id`, `url_id`, `started_at`, `resolved_at`, `duration_seconds`
+- [ ] `incidents` table: `id`, `url_id`, `started_at`, `resolved_at`, `duration_seconds`, `alert_fired_at`, `alert_resolved_at`
 - [ ] Write `schema.sql` + `db.py` helper (connection, migrations)
 
 **1.3 Flask Routes**
@@ -165,8 +165,8 @@ Each check sends a `GET` request to the URL and records four data points:
 - [ ] Deduplication: don't create duplicate alert records if same alert is still firing
 
 **4.3 Incident Linkback**
-- [ ] On alert fire, look up the open incident in DB and attach alert metadata
-- [ ] On resolve, close the incident and record duration
+- [ ] On alert fire, look up the open incident in DB and set `alert_fired_at`
+- [ ] On resolve, set `alert_resolved_at` on the incident row
 
 **4.4 Jenkinsfile — CI/CD Pipeline**
 - [ ] Stage 1 `test`: `pytest` for all three services in parallel
