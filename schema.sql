@@ -1,7 +1,16 @@
 CREATE TABLE IF NOT EXISTS urls(
     id          INTEGER   PRIMARY KEY AUTOINCREMENT,
     name        TEXT      NOT NULL,
-    urls        TEXT      NOT NULL UNIQUE,
+    url        TEXT      NOT NULL UNIQUE,
     created_at  DATETIME  DEFAULT CURRENT_TIMESTAMP
 );
+
+
+CREATE TABLE IF NOT EXISTS checks(
+    id          INTEGER   PRIMARY KEY AUTOINCREMENT,
+    url_id      INTEGER   NOT NULL REFERENCES urls(id) ON DELETE CASCADE
+    checked_at  DATETIME  DEFAULT CURRENT_TIMESTAMP
+    
+);
+
 

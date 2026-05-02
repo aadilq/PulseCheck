@@ -76,8 +76,8 @@ Each check sends a `GET` request to the URL and records four data points:
 - [✅] Add `.env.example` for environment variables
 
 **1.2 Database Schema**
-- [ ] `urls` table: `id`, `name`, `url`, `created_at`
-- [ ] `checks` table: `id`, `url_id`, `checked_at`, `status_code`, `response_time_ms`, `is_up`
+- [✅] `urls` table: `id`, `name`, `url`, `created_at`
+- [✅] `checks` table: `id`, `url_id`, `checked_at`, `status_code`, `response_time_ms`, `is_up`
 - [ ] `incidents` table: `id`, `url_id`, `started_at`, `resolved_at`, `duration_seconds`, `alert_fired_at`, `alert_resolved_at`
 - [ ] Write `schema.sql` + `db.py` helper (connection, migrations)
 
