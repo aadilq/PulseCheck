@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS urls(
+    id          INTEGER   PRIMARY KEY AUTOINCREMENT,
+    name        TEXT      NOT NULL,
+    urls        TEXT      NOT NULL UNIQUE,
+    created_at  DATETIME  DEFAULT CURRENT_TIMESTAMP
+);
+
