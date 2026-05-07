@@ -82,6 +82,7 @@ Each check sends a `GET` request to the URL and records four data points:
 - [✅] Write `schema.sql` + `db.py` helper (connection, migrations)
 
 **1.3 Flask Routes**
+- [✅]  Instantiate Basic Flask
 - [ ] `GET /` — status table (all URLs + latest check result)
 - [ ] `POST /urls` — add a new URL to monitor
 - [ ] `DELETE /urls/<id>` — remove a URL
